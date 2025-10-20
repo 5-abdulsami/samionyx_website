@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +17,8 @@
     --border-color: #2a3a4a;
     --success-color: #00d084;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-brand: 'Audiowide', cursive;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 html {
@@ -21,11 +26,12 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: var(--font-body);
     background-color: var(--primary-color);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    font-weight: 400;
 }
 
 .container {
@@ -72,7 +78,9 @@ body {
     align-items: center;
     gap: 12px;
     font-size: 24px;
-    font-weight: 700;
+    font-family: var(--font-brand);
+    font-weight: 400;
+    letter-spacing: 1px;
     color: var(--text-primary);
     text-decoration: none;
     transition: var(--transition);
@@ -89,8 +97,21 @@ body {
     display: block;
     width: 180px;
     height: auto;
-    margin: 0 auto 20px;
+    margin: 5px auto 0px;
     object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.4))
+          drop-shadow(0 0 60px rgba(0, 212, 255, 0.2));
+}
+
+/* Hero brand name in Audiowide */
+.hero-brand-name {
+    font-family: var(--font-brand);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4), 0 0 60px rgba(0, 212, 255, 0.2);
 }
 
 .nav-logo:hover {
@@ -218,22 +239,26 @@ body {
 
 .hero-title {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 800;
+    font-weight: 900;
+    font-family: var(--font-body);
     margin-bottom: 20px;
     line-height: 1.2;
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: -1px;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
+    font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: 0.3px;
 }
 
 .hero-buttons {
@@ -245,10 +270,10 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 14px 32px;
+    padding: 14px 35px;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
@@ -288,12 +313,14 @@ section {
 
 .section-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
+    font-weight: 900;
+    font-family: var(--font-body);
     text-align: center;
     margin-bottom: 60px;
     position: relative;
     display: inline-block;
     width: 100%;
+    letter-spacing: -0.5px;
 }
 
 .section-title::after {
@@ -322,9 +349,11 @@ section {
 
 .about-text p {
     font-size: 1.1rem;
+    font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 20px;
     line-height: 1.8;
+    letter-spacing: 0.2px;
 }
 
 .about-stats {
@@ -350,12 +379,16 @@ section {
 
 .stat h3 {
     font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-body);
     color: var(--accent-color);
     margin-bottom: 10px;
 }
 
 .stat p {
+    font-weight: 500;
     color: var(--text-secondary);
+    letter-spacing: 0.3px;
 }
 
 /* Services Section */
@@ -392,13 +425,17 @@ section {
 
 .service-card h3 {
     font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 15px;
     color: var(--text-primary);
+    letter-spacing: 0.3px;
 }
 
 .service-card p {
+    font-weight: 400;
     color: var(--text-secondary);
     line-height: 1.6;
+    letter-spacing: 0.2px;
 }
 
 /* Portfolio Section */
@@ -486,13 +523,17 @@ section {
 
 .portfolio-info h3 {
     font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 8px;
     color: var(--text-primary);
+    letter-spacing: 0.3px;
 }
 
 .portfolio-info p {
+    font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 15px;
+    letter-spacing: 0.2px;
 }
 
 .portfolio-tags {
@@ -508,7 +549,9 @@ section {
     border: 1px solid var(--accent-color);
     border-radius: 20px;
     font-size: 0.85rem;
+    font-weight: 500;
     color: var(--accent-color);
+    letter-spacing: 0.5px;
 }
 
 /* Lightbox */
@@ -569,13 +612,17 @@ section {
 
 .lightbox-info h3 {
     font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 10px;
     color: var(--accent-color);
+    letter-spacing: 0.5px;
 }
 
 .lightbox-info p {
+    font-weight: 400;
     color: var(--text-secondary);
     line-height: 1.6;
+    letter-spacing: 0.2px;
 }
 
 .lightbox-close,
@@ -663,10 +710,12 @@ section {
 }
 
 .testimonial-text {
+    font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 20px;
     line-height: 1.8;
     font-style: italic;
+    letter-spacing: 0.2px;
 }
 
 .testimonial-author {
@@ -690,13 +739,17 @@ section {
 
 .testimonial-author h4 {
     font-size: 1rem;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 3px;
+    letter-spacing: 0.3px;
 }
 
 .testimonial-author p {
     font-size: 0.9rem;
+    font-weight: 400;
     color: var(--text-secondary);
+    letter-spacing: 0.2px;
 }
 
 /* Contact Section */
@@ -713,14 +766,18 @@ section {
 
 .contact-info h3 {
     font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 20px;
     color: var(--text-primary);
+    letter-spacing: 0.5px;
 }
 
 .contact-info p {
+    font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 40px;
     line-height: 1.8;
+    letter-spacing: 0.2px;
 }
 
 .contact-details {
@@ -736,11 +793,11 @@ section {
 }
 
 .contact-label {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--accent-color);
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .contact-item a {
@@ -833,13 +890,17 @@ section {
 
 .footer-section h4 {
     font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 15px;
     color: var(--text-primary);
+    letter-spacing: 0.5px;
 }
 
 .footer-section p {
+    font-weight: 400;
     color: var(--text-secondary);
     line-height: 1.6;
+    letter-spacing: 0.2px;
 }
 
 .footer-section ul {
@@ -930,6 +991,13 @@ section {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    /* responsive hero brand name */
+    .hero-brand-name {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
     }
 
     /* responsive hero logo */
