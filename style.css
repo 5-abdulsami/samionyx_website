@@ -84,6 +84,15 @@ body {
     object-fit: contain;
 }
 
+/* new: hero logo (white variant) */
+.hero-logo {
+    display: block;
+    width: 180px;
+    height: auto;
+    margin: 0 auto 20px;
+    object-fit: contain;
+}
+
 .nav-logo:hover {
     color: var(--accent-color);
 }
@@ -921,6 +930,11 @@ section {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    /* responsive hero logo */
+    .hero-logo {
+        width: 90px;
     }
 
     .section-title {
