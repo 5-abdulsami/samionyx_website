@@ -110,7 +110,7 @@ body {
     font-weight: 400;
     letter-spacing: 3px;
     color: var(--text-primary);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-shadow: 0 0 30px rgba(0, 212, 255, 0.4), 0 0 60px rgba(0, 212, 255, 0.2);
 }
 
@@ -238,8 +238,8 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 900;
+    font-size: clamp(2.2rem, 6vw, 4.1rem);
+    font-weight: 800;
     font-family: var(--font-body);
     margin-bottom: 20px;
     line-height: 1.2;
@@ -252,9 +252,9 @@ body {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--text-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -270,11 +270,11 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 14px 35px;
+    padding: 8px 22px;
     border: none;
     border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
     text-decoration: none;
@@ -308,7 +308,7 @@ body {
 
 /* Sections */
 section {
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
 .section-title {
@@ -316,7 +316,7 @@ section {
     font-weight: 900;
     font-family: var(--font-body);
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     position: relative;
     display: inline-block;
     width: 100%;
